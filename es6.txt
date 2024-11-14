@@ -1,0 +1,93 @@
+ES6 (ECMAScript 2015) introduced a significant number of new features to JavaScript, expanding its capabilities and making code more concise and readable. Here is a comprehensive list of the main subtopics and features introduced by ES6:
+
+### 1. **Variable Declarations**
+   - `let`: Block-scoped variable declaration (instead of `var`).
+   - `const`: Block-scoped constant declaration (immutable binding).
+
+### 2. **Arrow Functions**
+   - Shorter syntax for writing functions.
+   - Lexical scoping of `this` (the value of `this` is inherited from the surrounding context).
+
+### 3. **Template Literals**
+   - String interpolation (embedding expressions in strings).
+   - Multiline strings.
+
+### 4. **Destructuring Assignment**
+   - Array and object destructuring to unpack values into variables.
+
+### 5. **Default Parameters**
+   - Providing default values for function parameters.
+
+### 6. **Rest and Spread Operators**
+   - **Rest (`...`)**: Collecting arguments into an array or object.
+   - **Spread (`...`)**: Expanding arrays or objects into individual elements.
+
+### 7. **Enhanced Object Literals**
+   - Shorthand property names.
+   - Method definitions in objects using shorthand syntax.
+   - Computed property names.
+
+### 8. **Classes**
+   - Introduction of class syntax for creating objects and prototypes.
+   - `constructor` method for initializing objects.
+   - Instance methods and static methods.
+
+### 9. **Modules**
+   - **`import`** and **`export`** for modularizing code.
+   - Default exports and named exports.
+
+### 10. **Promises**
+   - A new way of handling asynchronous operations, providing cleaner code with `.then()`, `.catch()`, and `.finally()`.
+
+### 11. **Iterators and Generators**
+   - **Iterators**: Objects that define a sequence and provide a way to access their elements.
+   - **Generators**: Functions that can yield multiple values over time, using `function*` and `yield`.
+
+### 12. **Map and Set**
+   - **Map**: A collection of key-value pairs where keys can be any data type.
+   - **Set**: A collection of unique values.
+
+### 13. **WeakMap and WeakSet**
+   - **WeakMap**: A collection of key-value pairs where keys are objects and are weakly referenced.
+   - **WeakSet**: A collection of unique objects that are weakly referenced.
+
+### 14. **Symbol**
+   - A primitive data type for creating unique identifiers, useful for properties that should not conflict.
+
+### 15. **New Built-in Methods**
+   - New methods on built-in objects such as `Array`, `Object`, `String`, `Math`, etc.
+   - Examples include `Array.from()`, `Object.assign()`, `String.includes()`, `Math.sign()`, etc.
+
+### 16. **New String Methods**
+   - Methods like `String.includes()`, `String.startsWith()`, `String.endsWith()`, `String.repeat()`, etc.
+
+### 17. **New Array Methods**
+   - Methods like `Array.find()`, `Array.findIndex()`, `Array.keys()`, `Array.values()`, `Array.includes()`, etc.
+
+### 18. **Object.assign()**
+   - Shallow copying of properties from one object to another.
+
+### 19. **Set and Map Iteration**
+   - Iterating over `Set` and `Map` using methods like `.forEach()`, `.keys()`, `.values()`, and `.entries()`.
+
+### 20. **Promise Chaining**
+   - Composing multiple asynchronous operations using `.then()`, allowing for a more readable asynchronous code structure.
+
+### 21. **New Number and Math Methods**
+   - Methods like `Number.isNaN()`, `Number.isFinite()`, `Math.trunc()`, `Math.cbrt()`, etc.
+
+### 22. **Reflect API**
+   - The `Reflect` object provides methods for interceptable JavaScript operations, such as `Reflect.get()`, `Reflect.set()`, and `Reflect.apply()`.
+
+### 23. **Proxy**
+   - A mechanism for creating objects that can intercept and redefine fundamental operations (like property access and method calls) on other objects.
+
+### 24. **Tail Call Optimization**
+   - An optimization where tail calls (recursive calls that are the last operation in a function) are optimized to avoid growing the call stack.
+
+### 25. **Async/Await (from ES7)**
+   - `async` functions and the `await` keyword for writing asynchronous code in a synchronous-like manner, improving readability.
+
+---
+
+This list covers the key features of ES6, and many of these features have further evolved in later ECMAScript versions.
