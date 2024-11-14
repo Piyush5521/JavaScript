@@ -6,10 +6,11 @@ let book = {
     
      getDescription(){
         return `${this.title} by ${this.author}, published in year ${this.year}`;
-     }
-    valueof(){
+     },
+    
+    valueOf(){
         return this.price;
     }
 };
 
-console.log(book.valueof());
+console.log(book.valueOf());
