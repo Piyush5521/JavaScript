@@ -1,5 +1,5 @@
 // palindrome 
-let num = prompt("Enter a number to check plaindrome: ", "");
+let num = prompt("Enter a string to check plaindrome: ", "");
 
 let splitum = num.split('');
 let reverseNum = splitum.reverse();
