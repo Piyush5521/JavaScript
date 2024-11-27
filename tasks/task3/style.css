@@ -1,0 +1,36 @@
+body{
+    background-color: skyblue;
+}
+
+.add_note{
+    float: right;
+    width: 100px;
+    background-color: rgb(104, 190, 19);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+}
+
+ol{
+    display: flex;
+    max-width: 600px;
+    list-style-type: none;
+}
+
+.card{
+    width: 422px;
+    margin-right: 1rem;
+}
+
+.card-nav{
+    background-color: rgb(104, 190, 19);
+    padding: 10px;
+    text-align: end;
+}
+
+textarea{
+    border: none;
+    outline: none;
+}
+

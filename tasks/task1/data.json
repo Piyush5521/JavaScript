@@ -1,0 +1,42 @@
+[
+    {
+      "question": "What is climate change, and what are its major causes?",
+      "answer": "Climate change refers to significant changes in global temperatures and weather patterns over time. While climate change occurs naturally, recent trends are primarily attributed to human activities, such as burning fossil fuels, deforestation, and industrial processes. These activities release large amounts of greenhouse gases like carbon dioxide and methane, which trap heat in the atmosphere and lead to global warming."
+    },
+    {
+      "question": "How does photosynthesis work in plants?",
+      "answer": "Photosynthesis is a process by which plants convert light energy from the sun into chemical energy stored in glucose. This process occurs in the chloroplasts of plant cells and primarily involves the green pigment chlorophyll. Plants take in carbon dioxide from the air and water from the soil, and in the presence of sunlight, these are transformed into glucose and oxygen. The overall equation for photosynthesis is: 6CO2 + 6H2O + light energy → C6H12O6 + 6O2."
+    },
+    {
+      "question": "What were the major events that led to the American Revolution?",
+      "answer": "The American Revolution was the result of growing tensions between the 13 American colonies and British rule. Key events included the imposition of taxes like the Stamp Act and Tea Act, which angered colonists due to 'taxation without representation.' Protests like the Boston Tea Party demonstrated colonial resistance. The British response, including the Intolerable Acts, further united the colonies against Britain. The Declaration of Independence in 1776 marked the formal start of the revolution."
+    },
+    {
+      "question": "Explain the theory of evolution by natural selection.",
+      "answer": "The theory of evolution by natural selection, proposed by Charles Darwin, explains how species adapt and evolve over time. It suggests that individuals within a population vary in traits, and those with traits better suited to their environment are more likely to survive and reproduce. Over generations, these advantageous traits become more common in the population. This process leads to the gradual development of new species and explains the diversity of life on Earth."
+    },
+    {
+      "question": "What is quantum mechanics and why is it important?",
+      "answer": "Quantum mechanics is a fundamental branch of physics that deals with the behavior of particles at very small scales, such as atoms and subatomic particles. Unlike classical mechanics, quantum mechanics introduces concepts like wave-particle duality, superposition, and entanglement. It is crucial because it explains phenomena that cannot be described by classical physics and underpins modern technologies like semiconductors, lasers, and quantum computing."
+    },
+    {
+      "question": "What are the major differences between renewable and non-renewable energy sources?",
+      "answer": "Renewable energy sources, such as solar, wind, hydroelectric, and geothermal energy, are naturally replenished and have a lower environmental impact. Non-renewable energy sources, like coal, oil, and natural gas, are finite and take millions of years to form. Using non-renewable resources releases significant greenhouse gases, contributing to climate change, whereas renewable energy is cleaner and more sustainable in the long term."
+    },
+    {
+      "question": "How do vaccines work to protect against diseases?",
+      "answer": "Vaccines work by introducing a weakened, inactive, or partial form of a pathogen into the body, prompting the immune system to recognize and respond to it without causing illness. This process helps the immune system produce specific antibodies and memory cells that can quickly respond to future infections by the same pathogen. This prepares the body to fight off the disease more effectively if exposed to it later."
+    },
+    {
+      "question": "What is the significance of the Industrial Revolution in world history?",
+      "answer": "The Industrial Revolution, which began in the late 18th century, marked a period of significant technological, economic, and social change. It introduced new manufacturing processes, transitioning from hand production to machine-based production in industries such as textiles and iron. The revolution spurred urbanization, improved transportation systems, and led to innovations like the steam engine. While it boosted economic growth, it also introduced challenges like labor exploitation and environmental pollution."
+    },
+    {
+      "question": "How do black holes form, and what are their properties?",
+      "answer": "Black holes form when massive stars exhaust their nuclear fuel and collapse under their gravity during a supernova explosion. The core becomes so dense that it creates a region where gravity is so strong that nothing, not even light, can escape. Black holes are characterized by their event horizon, the boundary beyond which escape is impossible, and their singularity, a point of infinite density. They can grow by consuming matter and merging with other black holes."
+    },
+    {
+      "question": "What are the major challenges of artificial intelligence in modern society?",
+      "answer": "Artificial intelligence (AI) presents several challenges, including ethical concerns about bias and fairness in AI systems, data privacy, and the potential for job displacement due to automation. Other challenges involve ensuring transparency and accountability in AI decision-making and addressing security risks like adversarial attacks. Additionally, the development of general AI raises concerns about the potential for machines to surpass human intelligence and the implications of such advancements."
+    }
+  ]

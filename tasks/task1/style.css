@@ -1,0 +1,36 @@
+body{
+    background-color: #f0f0f0;
+    font-family: 'lato', sans-serif;
+}
+
+.title{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container{
+    text-align: justify;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question{
+    padding: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.ans{
+    padding: 25px;
+    padding-top: 0px;   
+}
+
+.img{
+    float: right;
+}
+
+.qa{
+    border: 1px solid rgb(118, 116, 116);
+    border-radius: 15px;
+}
