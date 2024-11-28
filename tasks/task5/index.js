@@ -8,9 +8,11 @@ $("#notificationBtn").on("click", function(){
     var randomNumber = Math.floor(Math.random()*arr.length);
     var message = arr[randomNumber];
 
-    display.append(`<div class='card${randomNumber}'> ${message} <div/>`);
+    var toast = $(`<div class='card${randomNumber}'> ${message} </div>`);
+
+    display.append(toast);
 
     setTimeout(() => {
-            display.remove();
+            toast.remove();
     }, 3000); 
 })
