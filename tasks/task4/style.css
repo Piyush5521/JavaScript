@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(10, 139, 213);
+    font-family: 'Lato' sans-serif;
+}
+.container{
+    max-width: 960px;
+    margin-top: 10rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    color: white;
+    font-size: 1.2rem;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textmessage{
+    width: 500px;
+    height: 200px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+}
+
+.display{
+    margin-top: 2rem;
+    text-align: justify;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(200, 158, 44);
+    color: white;
+    padding: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    border-radius: 1.2rem;
+    width: fit-content;
+    margin-right: 1rem;
+}
+
+    .typedata{
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+@media (max-width: 700px){
+    
+    .container{
+        margin-top: 2rem;
+        height: 100%;
+    }
+
+    .textmessage, p{
+        width: 90%;
+    }
+
+    .display{
+        margin: 5px;
+        margin-top: 15px;
+        height: fit-content;
+    }
+
+    .typedata{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
