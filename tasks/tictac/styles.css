@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(47, 47, 47);
+    color: white;
+}
+.title{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 55px;
+    color: red;
+    text-shadow: 2px 5px rgb(228, 232, 19);
+}
+
+.container{
+    margin-top: 9rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 30%;
+    /* box-shadow: rgba(253, 253, 253, 0.242) 12px 12px; */
+}
+
+.row{
+    display: flex;
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+.col{
+    border-left: 1px solid white;
+    margin-right: 2rem;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding-left: 2rem;
+    padding-top: 2rem; 
+    font-size: 80px;
+}
+
