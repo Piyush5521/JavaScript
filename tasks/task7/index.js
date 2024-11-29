@@ -1,9 +1,8 @@
-// -2Qm6doTWeDl4sfJCj3mArnrfHcSdjvnPSd35zi5Uj4
 function fetchImages(){
 var searchfor = $("#searchfor");
 var query = searchfor.val().toLowerCase();
 
-fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=-2Qm6doTWeDl4sfJCj3mArnrfHcSdjvnPSd35zi5Uj4`)
+fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=//enter api key here-------------------->>>>>>`)
 
 .then(function(response) {
     return response.json();
