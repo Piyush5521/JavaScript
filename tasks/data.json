@@ -4,5 +4,6 @@
     {"Taskname": "Notes", "url": "task3/index.html"},
     {"Taskname": "Keys version 2", "url": "task2.2/index.html"},
     {"Taskname": "Random Choice Picker", "url": "task4/index.html"},
-    {"Taskname": "Toast", "url": "task5/index.html"}
+    {"Taskname": "Toast", "url": "task5/index.html"},
+    {"Taskname": "Dice Game", "url": "dice/index.html"}
 ]
