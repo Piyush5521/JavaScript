@@ -5,5 +5,7 @@
     {"Taskname": "Keys version 2", "url": "task2.2/index.html"},
     {"Taskname": "Random Choice Picker", "url": "task4/index.html"},
     {"Taskname": "Toast", "url": "task5/index.html"},
-    {"Taskname": "Dice Game", "url": "dice/index.html"}
+    {"Taskname": "Dice Game", "url": "dice/index.html"},
+    {"Taskname": "Search with Suggestion", "url": "task6/index.html"},
+    {"Taskname": "Unsplash API", "url": "task7/index.html"}
 ]
