@@ -21,7 +21,7 @@ message.keyup(function(event){
     var data = "";
     
     for(var j = 0; j< arr.length; j++){
-        data +=`<span class="display">'${arr[j]}'</span>`
+        data +=`<span class="display">${arr[j]}</span>`
     }
 
 
