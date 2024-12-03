@@ -1,4 +1,9 @@
+
+$("#profile").hide();
+
 function fetchUserName(){
+
+    $("#profile").show();
 
     let input = $("#username");
     let username = input.val().toLowerCase();
@@ -15,9 +20,9 @@ function fetchUserName(){
         var locations = data.location;
         var viewprofile = data.html_url;
         var blog = data.blog;
-        var email = data.email || 'Not provided';
-        var twitter = data.twitter_username || 'Not available';
-        var bio = data.bio || 'Not available';
+        var email = data.email;
+        var twitter = data.twitter_username;
+        var bio = data.bio;
         var publicRepos = data.public_repos;
         var public_gists = data.public_gists;
         var followers = data.followers;
@@ -25,8 +30,8 @@ function fetchUserName(){
         var profile_created_at = data.created_at;
         var profile_updated_at = data.updated_at;
 
-        profile_created_at  =  profile_created_at.replace("T", " ").toLocaleString();
-        profile_updated_at = profile_updated_at.replace("T", " ").toLocaleString();
+        profile_created_at  =  profile_created_at.replace("T", " ");
+        profile_updated_at = profile_updated_at.replace("T", " ");
 
         var user_image = $("#user_image");
         $(user_image).attr("src", image);
@@ -72,6 +77,20 @@ function fetchUserName(){
     });
 } 
 
+// I use a debounce function here --->
+
+function github_profile(callback){
+    let timeout;
+    return () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(()=> {
+            callback();
+        }, 1000)
+    }
+}
+
+
+$("#username").on("input", github_profile(fetchUserName));
 
 
 
