@@ -7,5 +7,7 @@
     {"Taskname": "Toast", "url": "task5/index.html"},
     {"Taskname": "Dice Game", "url": "dice/index.html"},
     {"Taskname": "Search with Suggestion", "url": "task6/index.html"},
-    {"Taskname": "Unsplash API", "url": "task7/index.html"}
+    {"Taskname": "Photo Search", "url": "task7/index.html"},
+    {"Taskname": "Github Profile", "url": "task8/index.html"},
+    {"Taskname": "Login Signup", "url": "task9/index.html"}
 ]
