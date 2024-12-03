@@ -1,0 +1,155 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+}
+
+.container{
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row{
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.col{
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.social_icons{
+    margin-top: 2rem;
+}
+
+.fa-facebook, .fa-google-plus{
+    margin-right: 15px;
+}
+
+.sign_in_text1{
+    font-size: 9px;
+    color: rgb(88, 87, 87);
+}
+
+.sign_in_text2{
+    font-size: 12px;
+    color: rgb(88, 87, 87);
+}
+
+
+.input_field{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    padding: 8px;
+    font-size: 12px;
+    width: 70%;
+}
+
+.form{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.signin_btn{
+    color: white;
+    background-color: #FF4B2B;
+    border: none;
+    width: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    font-size: 11px;
+    height: 30px;
+}
+
+.sign_up_text1{
+    font-size: 10px;
+    color: rgb(88, 87, 87);
+}
+
+.container2_signin_text{
+    font-size: 13px;
+    width: 70%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container2{
+    width: 680px;
+    color: white;
+    position: absolute;
+    top: 7px;
+    height: 438px;
+    border-radius: 10px;
+}
+
+.colOfSecond{
+    position: absolute;
+    right: 0px;
+    height: 75%;
+    background: rgb(255,75,43);
+background: linear-gradient(90deg, rgba(255,75,43,1) 35%, rgba(255,65,108,1) 100%);
+    margin-top: 0px;
+    padding-top: 7rem;
+    width: 50%;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;   
+}
+
+.trans{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.sign_in{
+    z-index: 1;
+    width: 50%;
+}
+
+.colOfSecond2{
+    background: rgb(255,75,43);
+    background: linear-gradient(90deg, rgba(255,75,43,1) 35%, rgba(255,65,108,1) 100%);
+    margin-left: auto;
+    float: right;
+    width: 50%;
+    margin-top: 0px;
+    padding-top: 7rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.create_account{
+    width: 50%;
+    float: right;
+    margin-left: auto;
+}
+
+.content{
+    transform: translateX(-100%);
+	opacity: 1;
+	z-index: 5;
+	transition: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+.rtl{
+    transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	transition: 0.6s;
+    transition-timing-function: ease-in-out;
+}
