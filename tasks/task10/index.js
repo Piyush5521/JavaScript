@@ -1,10 +1,19 @@
 var input = $("#input");
-
 var blogs = $("#blogs");
 
 var data = [];
 
-fetch("https://jsonplaceholder.typicode.com/posts")
+let limit = 5;
+let page = 1;
+let isLoading = false;
+
+fetchingData()
+function fetchingData(){
+    
+    if (isLoading) return;
+    isLoading = true;
+
+fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
 
 .then(function(response){
     return response.json();
@@ -19,29 +28,47 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
         blogCard += `
             <div class="card">
-            <div class="numbers">${blog.id}</div>
-            <div class="title">
-                ${blog.title}
-            </div>
-            <div class="body">
-                ${blog.body}
-            </div>
+                <div class="numbers">${blog.id}</div>
+                <div class="title">${blog.title}</div>
+                <div class="body">${blog.body}</div>
             </div>
             <br>
         `
     }
 
-    $(blogs).html(blogCard);
+        $(blogs).append(blogCard);
+
+        isLoading = false;
+        page++;
 })
+}
+
+$(window).on('scroll', function() {
+    
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+        fetchingData();
+    }
+});
 
 function search(){
 
     var inputValue = input.val().toLowerCase();
     var findData = data.filter(item => item.title.toLowerCase().includes(inputValue));
     
-    var sd = findData.map(item => item.title );
+    var sd = findData.map(item => (`
+            <div class="card">
+                <div class="numbers">${item.id}</div>
+                <div class="title">${item.title}</div>
+                <div class="body">${item.body}</div>
+            </div>
+            <br>`) );
 
-    $(blogs).html(sd);
+    if(inputValue !== ""){
+        $(blogs).html(sd);
+    }
+    else{
+        $(blogs).html(blogCard);
+    }
 }
 
 
