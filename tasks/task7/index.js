@@ -29,7 +29,7 @@ function fetchImages() {
         store = "No images found.";
       }
 
-      display.innerHTML = store;
+      display.html(store);
     });
 }
 
