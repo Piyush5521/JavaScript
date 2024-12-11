@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>RdataTB: Simple Fast Data Table Example</h1>
+
+        <div class="tableContainer">
+            <div class="search">
+                <div class="sortbutton" id="sort_btn">
+                    <span id="Selectednumber">5</span> <span style="float: right;"><img src="https://cdn-icons-png.flaticon.com/512/32/32195.png" alt="" width="10px"></span>
+                </div>
+               
+                <input class="searchBar" type="text" id="searchfield" placeholder="Search">
+            </div>
+            <div class="sortDropdown" id="sort_dropDown">
+                <ul>
+                    <li id="set5">5</li>
+                    <li id="set10">10</li>
+                    <li id="set15">15</li>
+                    <li id="set20">20</li>
+                    <li id="set25">25</li>
+                    <li id="set100">100</li>
+                </ul>
+            </div>
+            <div class="tableData">
+                <table>
+                    <tr>
+                        <th class="fieldName">Name</th>
+                        <th class="fieldExt">Ext.</th>
+                        <th class="fieldCity">City</th>
+                        <th class="fieldStartDate">Start Date</th>
+                        <th class="fieldCompletion">Completion</th>
+                    </tr>
+                    <tbody id="display_table">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js" charset="UTF-8"></script>
+</body>
+</html>

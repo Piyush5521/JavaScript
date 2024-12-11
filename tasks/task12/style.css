@@ -1,0 +1,101 @@
+body{
+    background-color: whitesmoke;
+    font-family: 'poppins', sans-serif;
+    font-size: 13px;
+}
+
+.container{
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableContainer{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(231, 229, 229);
+    border-radius: 3px;
+}
+
+.searchBar{
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    outline: none;
+    width: 30%;
+}
+
+.fieldName{
+    width: 30%;
+    padding: 10px 5px;
+}
+
+
+.fieldExt{
+    width: 10%;
+    padding: 5px;
+}
+
+.fieldCity{
+    width: 10%;
+    padding: 5px;
+}
+
+.fieldStartDate{
+    width: 20%;
+    padding: 5px;
+}
+
+.fieldCompletion{
+    width: 15%;
+    padding: 5px;
+}
+
+.tableData{
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, td, th{
+    border: 1px solid rgb(224, 222, 222);
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.search{
+    display: flex;
+}
+
+.sortbutton{
+    width: 60px;
+    padding: 5px 10px;
+    margin-right: 1rem;
+    border: 1px solid;
+}
+
+ul{
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+li{
+    padding: 2px 5px;
+}
+
+li:hover{
+    background-color: whitesmoke;
+}
+
+.sortDropdown{
+    width: 80px;
+    border: 1px solid  rgb(224, 222, 222);
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
