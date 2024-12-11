@@ -87,22 +87,23 @@ fetch("json.json")
    
     var newarr;
 
-    $.each(data, function(key, item){
-        console.log("Name " + item.Name);
-        newarr = item.filter((item) => item.Name.toLowerCase() === inputarr);
-        console.log(newarr);
+    newarr = data.filter((a) => a.Name.toLowerCase().includes(inputarr));
+    console.log(newarr);
 
-        // var sd = "";
+    var sd = "";
 
-        // newarr.forEach((item) => {
-        //     sd += `<tr><td class="fieldName"> ${value.Name}</td>
-        //     <td class="fieldExt">${value["Ext."]}</td>
-        //     <td class="fieldCity">${value.City}</td>
-        //     <td class="fieldStartDate"> ${value["Start Date"]} </td>
-        //     <td class="fieldCompletion">${value.Completion}</td>
-        //     </tr>`;
-        // })
+    $.each(newarr, function(key, item){
+        // console.log("Name " + item.Name)
+            sd += `<tr><td class="fieldName"> ${item.Name}</td>
+            <td class="fieldExt">${item["Ext."]}</td>
+            <td class="fieldCity">${item.City}</td>
+            <td class="fieldStartDate"> ${item["Start Date"]} </td>
+            <td class="fieldCompletion">${item.Completion}</td>
+            </tr>`;
+       
     })
+    Displaytable.html("");
+    Displaytable.html(sd);
  })
 
 })
