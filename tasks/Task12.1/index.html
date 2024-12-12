@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataTable</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>DataTable</h1>
+
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Ext.</th>
+            <th>City</th>
+            <th>Start Date</th>
+            <th>Completion</th>
+          </tr>
+        </thead>
+
+        <tbody id="display_data"></tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+    <!-- <script src="https://cdn.datatables.net/plug-ins/2.1.8/dataRender/datetime.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script> -->
+
+    <script src="https://cdn.datatables.net/plug-ins/2.1.8/pagination/select.js"></script>    
+   <!-- <script src="https://cdn.datatables.net/plug-ins/2.1.8/pagination/simple_incremental_bootstrap.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/plug-ins/2.1.8/pagination/bootstrap_input.js"></script> -->
+    <script src="index.js" charset="UTF-8"></script>
+  </body>
+</html>
