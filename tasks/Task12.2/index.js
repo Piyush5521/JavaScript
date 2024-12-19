@@ -1,174 +1,111 @@
 $(document).ready(function () {
-  var myTable = $("#myTable").DataTable({
-    ajax: {
-      url: "./json.json",
+  var myTable;
+  var datataken;
+
+  $.ajax({
+    url: "./json.json",
+    success: function (data) {
+      datataken = data.data;
+      myTable = $("#myTable").DataTable({
+        data: datataken,
+        columns: [
+          { data: "Name" },
+          { data: "Ext" },
+          { data: "City" },
+          { data: "Start Date" },
+          { data: "Completion" },
+          // Add action field
+          {
+            mData: null,
+            bSortable: false,
+            mRender: function () {
+              return `<button class="btn btn-info btn-sm">Edit</button>`;
+            },
+          },
+        ],
+        columnDefs: [
+          {
+            targets: [0, 1, 2, 3, 4],
+            render: function (data) {
+              return `<span class="form-control">${data}</span>`;
+            },
+          },
+        ],
+      });
     },
-    columns: [
-      { data: "Name" },
-      { data: "Ext" },
-      { data: "City" },
-      { data: "Start Date" },
-      { data: "Completion" },
-      // add action buttons
-      {
-        mData: null,
-        bSortable: false,
-        mRender: function (data, type, full) {
-          return `<button class="btn btn-info btn-sm">Edit</button>`;
-        },
-      },
-    ],
-    columnDefs: [
-      {
-        targets: [0, 1, 2, 3, 4],
-        render: function (data, type, row) {
-          return `<span class="form-control">${data}</span>`;
-        },
-      },
-    ],
   });
 
+  var rowindex;
+  var rowData;
+
+  // Edit button
   $("#myTable").on("click", ".btn", function () {
     var full = $(this).closest("tr");
-    var fullvalue = myTable.row(full).data();
-    
-    var arr = Object.values(fullvalue);
 
-    // console.log(fullvalue);
+    rowindex = myTable.row(full).index();
+    rowData = myTable.row(rowindex).data();
+
     full.find("td").each(function (item) {
       var cell = $(this);
-
-      // console.log(cell.html());
-
       var celltext = cell.html();
 
       var abc = $(celltext).text();
-      // console.log(abc);
 
       if (item < 5) {
-        cell.html(`<input type="text" class="formcontrol" value="${abc}"/>`);
+    
+        cell.html(`<input type="text" class="form-control" value="${abc}"/>`);
       } else {
+       
         cell.html(
-          `<div class="action_btn" style="display:flex;"><button class="savebtn" id="save_btn">Save</button> <button class="cancelbtn" id="cancel_btn">Cancel</button> </div>`
+          `<div class="action_btn" style="display:flex;">
+            <button class="savebtn" id="save_btn">Save</button> 
+            <button class="cancelbtn" id="cancel_btn">Cancel</button> 
+          </div>`
         );
       }
     });
-
-    full.find("#save_btn").on("click", function () {
-      full.find("td input").each(function (i, data) {
-        // var updatedData = full.find('td input').val();
-        // console.log(data);
-        var replaceInput = data;
-        var ud = $(data).val();
-        arr[i] = ud;
-       
-        $(replaceInput).replaceWith(`<span class="form-control">${ud}</span>`);
-      });
-      $("#save_btn").closest("td").replaceWith(`<td><button class="btn btn-info btn-sm">Edit</button></td>`);
-      console.log(arr);
-    });
-
-
-    full.find("#cancel_btn").on("click", function () {
-      
-      full.find("td").each(function (index) {
-          var cell = $(this);
-          // console.log(cell.html());
-  
-          if (index < 5 && index < arr.length) { 
-              cell.html(`<span>${arr[index]}</span>`);
-          } else {
-              cell.replaceWith('<td><button class="btn btn-info btn-sm">Edit</button></td>');
-          }
-      });
   });
+
+  // Save buton
+  $("#myTable").on("click", "#save_btn", function () {
+    var full = $(this).closest("tr");
+
+    full.find("td").each(function (item) {
+      var cell = $(this);
+
+      if (item < 5) {
+       
+        var inputValue = cell.find("input").val();
+        rowData[Object.keys(rowData)[item]] = inputValue;
+     
+        cell.html(`<span class="form-control">${inputValue}</span>`);
+      
+      } else {
+        cell.html(
+          `<button class="btn btn-info btn-sm">Edit</button>`
+        );
+      }
+
+    });
+  });
+
+  //  cancel button
+  $("#myTable").on("click", "#cancel_btn", function () {
+    var full = $(this).closest("tr");
+
+   
+    full.find("td").each(function (item) {
+      var cell = $(this);
+      var originalValue = rowData[Object.keys(rowData)[item]];
+
+      if (item < 5) {
+       
+        cell.html(`<span class="form-control">${originalValue}</span>`);
+      } else {
+       
+        cell.html(`<button class="btn btn-info btn-sm">Edit</button>`);
+      }
+    });
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function () {
-//   var myTable = $("#myTable").DataTable({
-//     ajax: {
-//       url: "./json.json", // replace with your JSON file URL
-//     },
-//     columns: [
-//       { data: "Name" },
-//       { data: "Ext" },
-//       { data: "City" },
-//       { data: "Start Date" },
-//       { data: "Completion" },
-//       {
-//         // Add "Edit" button in the last column
-//         data: null,
-//         defaultContent: '<button class="editBtn">Edit</button>',
-//         orderable: false, // Disable sorting for the Edit column
-//       },
-//     ],
-//     columnDefs: [{
-//       targets: [0, 1, 2, 3, 4],
-//       render: function(data, type, row){
-//         return `<span class="formcontrol">${data}</span>`;
-//       }
-//     }]
-//   });
-
-//   // Handle the click event on the "Edit" button
-//   $('#myTable tbody').on('click', '.editBtn', function () {
-//     var row = myTable.row($(this).closest('tr')); // Get the row
-//     var rowData = row.data(); // Get the row data
-    
-//     // Change the cells to input fields
-//     var rowNode = $(row.node());
-//     rowNode.find('td').each(function (index) {
-//       var cell = $(this);
-//       var column = myTable.column(index); // Get the column index
-
-//       // Skip the "Edit" button column
-//       if (index !== 5) {
-//         var originalData = rowData[column.index()];
-//         var inputHtml = `<input type="text" class="edit-input" value="${originalData}">`;
-//         cell.html(inputHtml); // Replace the cell content with an input field
-//       }
-//     });
-
-//     // Change the "Edit" button to a "Save" button
-//     $(this).text('Save').removeClass('editBtn').addClass('saveBtn');
-
-//     // Handle the "Save" button click
-//     rowNode.on('click', '.saveBtn', function () {
-//       var updatedData = {};
-
-//       rowNode.find('td').each(function (index) {
-//         var cell = $(this);
-//         var input = cell.find('.edit-input');
-        
-//         if (input.length) {
-//           // Get the updated value from the input field
-//           var updatedValue = input.val();
-//           updatedData[myTable.settings()[0].aoColumns[index].data] = updatedValue;
-//         }
-//       });
-
-//       // Update the DataTable row with the new data
-//       row.data(updatedData).draw();
-
-//       // Reset the button back to "Edit"
-//       $(this).text('Edit').removeClass('saveBtn').addClass('editBtn');
-//     });
-//   });
-// });
