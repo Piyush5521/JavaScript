@@ -11,5 +11,6 @@
     {"Taskname": "Github Profile", "url": "task8/index.html"},
     {"Taskname": "Login Signup", "url": "task9/index.html"},
     {"Taskname": "Infinite Scroll", "url": "task10/index.html"},
-    {"Taskname": "Word To HTML", "url": "task11/index.html"}
+    {"Taskname": "Word To HTML", "url": "task11/index.html"},
+    {"Taskname": "Datatable", "url": "task12.2/index.html"}
 ]
