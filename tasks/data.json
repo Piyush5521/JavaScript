@@ -12,5 +12,6 @@
     {"Taskname": "Login Signup", "url": "task9/index.html"},
     {"Taskname": "Infinite Scroll", "url": "task10/index.html"},
     {"Taskname": "Word To HTML", "url": "task11/index.html"},
-    {"Taskname": "Datatable", "url": "Task12.2/index.html"}
+    {"Taskname": "Datatable", "url": "Task12.2/index.html"},
+    {"Taskname": "Datatable(Local Storage)", "url": "Task12.2/index.html"}
 ]
