@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataTable</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://editor.datatables.net/extensions/Editor/css/editor.bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>DataTable</h1>
+
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Ext</th>
+            <th>City</th>
+            <th>Start Date</th>
+            <th>Completion</th>
+          </tr>
+        </thead>
+
+        <!-- <tbody id="display_data"></tbody> -->
+      </table>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.7.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/2.1.7/js/dataTables.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/extensions/Editor/js/dataTables.editor.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/extensions/Editor/js/editor.dataTables.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/select/2.1.0/js/select.dataTables.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/select/2.1.0/js/dataTables.select.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.dataTables.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/datetime/1.5.4/js/dataTables.dateTime.min.js"
+    ></script>
+
+    <script src="dropdown.js"></script>
+
+    <script src="test.js" charset="UTF-8"></script>
+  </body>
+</html>
+
+
+<!-- 
+let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+let sortData = "";
+
+let str = prompt("Enter a string", "");
+
+let strArr = [];  
+for (let i = 0; i < str.length; i++) {
+    strArr.push(str[i]);
+}
+
+for (let i = 0; i < strArr.length; i++) {
+    for (let j = i + 1; j < strArr.length; j++) {
+        
+        if (arr.indexOf(strArr[i]) > arr.indexOf(strArr[j])) {
+            
+            let temp = strArr[i];
+            strArr[i] = strArr[j];
+            strArr[j] = temp;
+        }
+    }
+}
+
+for (let i = 0; i < strArr.length; i++) {
+    sortData += strArr[i];
+}
+console.log(sortData); 
+ -->
