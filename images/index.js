@@ -24,6 +24,25 @@ const fetchData = async () => {
         const filteredData = data.filter((item) => item.category === "animal");
         displayImages(filteredData);
     })
+
+        const debounce = (func, delay) => {
+        let timeoutId;
+        return function(...args) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+    };
+
+    const searchImages = (query) => {
+        const filteredData = data.filter((item) => item.category.toLowerCase().includes(query.toLowerCase()));
+        displayImages(filteredData);
+    };
+
+    $("#searchfor").on("input", debounce(function() {
+        const query = $(this).val();
+        searchImages(query);
+    }, 1000)); 
+
 }
 
 fetchData();
