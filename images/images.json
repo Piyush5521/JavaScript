@@ -11,5 +11,10 @@
     {
         "category" : "travel",
         "url" : "image/travel.jpg"
+    },
+    
+    {
+        "category" : "mountains",
+        "url" : "image/grandteton.jpg"
     }
 ]
