@@ -44,6 +44,10 @@ body{
     cursor: pointer;
 }
 
+.displayImages{
+    display:flex;
+}
+
 .img{
     width:300px;
 }
