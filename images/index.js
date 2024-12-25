@@ -25,6 +25,16 @@ const fetchData = async () => {
         displayImages(filteredData);
     })
 
+    $("#travel_btn").on("click", function(){
+        const filteredData = data.filter((item) => item.category === "travel");
+        displayImages(filteredData);
+    })
+
+    $("#mountain_btn").on("click", function(){
+        const filteredData = data.filter((item) => item.category === "mountain");
+        displayImages(filteredData);
+    })
+
         const debounce = (func, delay) => {
         let timeoutId;
         return function(...args) {
