@@ -51,3 +51,26 @@ body{
 .img{
     width:300px;
 }
+
+
+ .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid layout with flexible columns */
+      gap: 15px; /* Space between images */
+      padding: 20px;
+    }
+
+    /* Gallery images */
+    .card img {
+      width: 100%; /* Ensure images fill the grid cell */
+      height: auto;
+      object-fit: cover; /* Crop images to cover the area */
+      border-radius: 10px; /* Optional: rounded corners */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
+    }
+
+    /* Hover effect on images */
+    .card img:hover {
+      transform: scale(1.05); /* Zoom effect */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    }
