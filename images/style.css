@@ -43,3 +43,7 @@ body{
     border: none;
     cursor: pointer;
 }
+
+.img{
+    width:100px;
+}
