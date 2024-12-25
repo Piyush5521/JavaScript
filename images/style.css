@@ -76,10 +76,9 @@ body{
     }
 
 .car_button, .animal_button{
-    height: 4vh;
     border: none;
-    border-radius: 15px;
-    font-size: 18px;
+    border-radius: 20px;
+    font-size: 15px;
     font-weight: 600;
     padding: 8px 20px;
     background-color: transparent;
