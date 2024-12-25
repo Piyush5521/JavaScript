@@ -74,3 +74,17 @@ body{
       transform: scale(1.05); /* Zoom effect */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slight shadow */
     }
+
+.car_button, .animal_button{
+    height: 4vh;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 20px;
+    background-color: transparent;
+}
+
+.car_button:hover, .animal_button:hover{
+    background-color: whitesmoke;
+}
