@@ -7,9 +7,5 @@
     {
         "category" : "animal",
         "url" : "image/cat.jpg"
-    },
-    {
-        "category" : "animal",
-        "url" : "cat.jpg"
     }
 ]
