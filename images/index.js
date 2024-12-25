@@ -6,7 +6,7 @@ const fetchData = async () => {
 
     let str = "";
     data.map((item) => {
-        str += `<img src="${item.url}" alt="${item.category} class="img" style="margin-right:5px">`;
+        str += `<img src="${item.url}" alt="${item.category} class="img" style="margin-right:5px; width:300px;">`;
     });
 
     CardImage.html(str);
