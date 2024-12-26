@@ -7,7 +7,7 @@ const fetchData = async () => {
     const displayImages = (data) => {
         let str = "";
         data.map((item) => {
-            str += `<img src="${item.url}" alt="${item.category} class="img" style="margin-right:5px;">`;
+            str += `<img src="${item.url}" alt="${item.category.join(', ')}" class="img" style="margin-right:5px;">`;
         });
 
         CardImage.html(str);
@@ -16,26 +16,26 @@ const fetchData = async () => {
     displayImages(data);
 
     $("#car_btn").on("click", function(){
-        const filteredData = data.filter((item) => item.category === "car");
+        const filteredData = data.filter((item) => item.category.includes("car"));
         displayImages(filteredData);
-    })
+    });
 
     $("#animal_btn").on("click", function(){
-        const filteredData = data.filter((item) => item.category === "animal");
+        const filteredData = data.filter((item) => item.category.includes("animal"));
         displayImages(filteredData);
-    })
+    });
 
     $("#travel_btn").on("click", function(){
-        const filteredData = data.filter((item) => item.category === "travel");
+        const filteredData = data.filter((item) => item.category.includes("travel"));
         displayImages(filteredData);
-    })
+    });
 
     $("#mountain_btn").on("click", function(){
-        const filteredData = data.filter((item) => item.category === "mountain");
+        const filteredData = data.filter((item) => item.category.includes("mountain"));
         displayImages(filteredData);
-    })
+    });
 
-        const debounce = (func, delay) => {
+    const debounce = (func, delay) => {
         let timeoutId;
         return function(...args) {
             clearTimeout(timeoutId);
@@ -44,7 +44,9 @@ const fetchData = async () => {
     };
 
     const searchImages = (query) => {
-        const filteredData = data.filter((item) => item.category.toLowerCase().includes(query.toLowerCase()));
+        const filteredData = data.filter((item) => 
+            item.category.some(cat => cat.toLowerCase().includes(query.toLowerCase()))
+        );
         displayImages(filteredData);
     };
 
@@ -52,7 +54,6 @@ const fetchData = async () => {
         const query = $(this).val();
         searchImages(query);
     }, 1000)); 
-
 }
 
 fetchData();
