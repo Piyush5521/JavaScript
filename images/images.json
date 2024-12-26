@@ -1,20 +1,20 @@
 [
     {
-        "category" : "car",
+        "category" : ["car", "vehicle"],
         "url" : "image/car.jpg"
     },
 
     {
-        "category" : "animal",
+        "category" : ["animal", "cat"],
         "url" : "image/cat.jpg"
     },
     {
-        "category" : "travel",
+        "category" : ["travel", "beach"],
         "url" : "image/travel.jpg"
     },
     
     {
-        "category" : "mountain",
+        "category" : ["mountain", "trek"],
         "url" : "image/grandteton.jpg"
     }
 ]
