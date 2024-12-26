@@ -5,7 +5,7 @@
     },
 
     {
-        "category" : "animal",
+        "category" : ["animal", "cat"],
         "url" : "image/cat.jpg"
     },
     {
